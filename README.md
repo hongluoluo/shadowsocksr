@@ -93,13 +93,13 @@ pip install -r requestment.txt
     
 #### 测试并运行
 
-节点手动测试运行：
-cd /root/shadowsocksr
-python server.py 
+节点手动测试运行：  
+cd /root/shadowsocksr  
+python server.py   
 
-如果正常的话，使用自带脚本后台运行：
-cd /root/shadowsocksr
-./run.sh
+如果正常的话，使用自带脚本后台运行：  
+cd /root/shadowsocksr  
+./run.sh  
 
 #### 使用脚本 运行、关闭、看日志
 
