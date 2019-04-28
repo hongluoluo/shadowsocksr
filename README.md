@@ -12,57 +12,16 @@ SSRR
 #### Ubuntu/Debian
 - sudo apt-get update
 
-## 安装
-#### Python3.x
+## 安装 Python3.x
+安装python3,安装完成后会自带pip3,如果没有，再重新安装pip3
+yum install python36
 
-1. 安装pyenv 参照:[Pyenv Common build problems](https://github.com/pyenv/pyenv/wiki/Common-build-problems)
-```
-# Ubuntu/Debian:
-sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-xz-utils tk-dev libffi-dev liblzma-dev gcc
-
-# Fedora/CentOS/RHEL(aws ec2):
-sudo yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel \
-openssl-devel xz xz-devel libffi-devel gcc
-```
-
-2.安装pyenv，这个不是必须的，系统安装python3.x后，就可以直接使用了
-```
-curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
-```
-
-3.添加环境变量到.bashrc
-```
-cat >> ~/.bashrc << EOF
-export PATH="/root/.pyenv/bin:\$PATH"
-eval "\$(pyenv init -)"
-eval "\$(pyenv virtualenv-init -)"
-EOF
-source ~/.bashrc
-```
-
-4.安装并启用python
-```
-pyenv install 3.7.1
-pyenv global 3.7.1
-```
-
-5.安装shadowsocks依赖
+## 安装shadowsocks依赖
 ```
 cd shadowsocksr
-pip install -r requestment.txt
+pip3 install -r requestment.txt
 ```
 ---
-
-#### Python2.x
-```
-# Ubuntu/Debian:
-apt-get install python-pip
-
-cd shadowsocksr
-pip install -r requestment.txt
-```
 
 #### 编辑节点配置（混淆、协议、限速、IPV6）
 
