@@ -27,7 +27,7 @@ sudo yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel
 openssl-devel xz xz-devel libffi-devel gcc
 ```
 
-2.安装pyenv
+2.安装pyenv，这个不是必须的，系统安装python3.x后，就可以直接使用了
 ```
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 ```
@@ -90,8 +90,18 @@ pip install -r requestment.txt
     db 面板所在数据库
     node_id 节点ID，对应面板里的 节点列表 最左侧的id（请先将面板搭建好，然后创建一个节点，就有节点ID了）
     transfer_mul 节点流量计算比例，默认1.0，填1也可以，1表示：用了100M算100M，10表示用了100M算1000M，0.1表示用了100M算10M。
+    
+#### 测试并运行
 
-#### 运行、关闭、看日志
+节点手动测试运行：
+cd /root/shadowsocksr
+python server.py 
+
+如果正常的话，使用自带脚本后台运行：
+cd /root/shadowsocksr
+./run.sh
+
+#### 使用脚本 运行、关闭、看日志
 
     sh logrun.sh
     sh stop.sh
